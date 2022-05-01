@@ -1,0 +1,66 @@
+@import url('https://rsms.me/inter/inter.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: 'Inter', sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', sans-serif;
+  }
+}
+
+html {
+  font-family: 'Inter', system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'case', 'rlig', 'calt' 0;
+  text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', system-ui, sans-serif;
+  }
+}
+
+* {
+  scrollbar-color: dark;
+}
+
+html::-webkit-scrollbar {
+  width: 8px;
+}
+
+html::-webkit-scrollbar-track {
+  background: theme('colors.gray.50');
+}
+
+html::-webkit-scrollbar-thumb {
+  background: theme('colors.gray.300');
+  border-radius: 2px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.gray.400');
+}
+
+html.dark::-webkit-scrollbar {
+  width: 8px;
+}
+
+html.dark::-webkit-scrollbar-track {
+  background: theme('colors.gray.800');
+}
+
+html.dark::-webkit-scrollbar-thumb {
+  background: theme('colors.gray.700');
+  border-radius: 2px;
+}
+
+html.dark::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.gray.600');
+}

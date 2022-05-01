@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "devDependencies": {
+    "nuxt": "3.0.0-rc.1"
+  },
+  "dependencies": {
+    "@dnlsndr/vue-phosphor-icons": "^1.15.0",
+    "@hotellistat/robust-ui": "^0.17.3",
+    "@tailwindcss/typography": "^0.5.2",
+    "autoprefixer": "^10.4.5",
+    "cssnano": "^5.1.7",
+    "postcss": "^8.4.13",
+    "postcss-import": "^14.1.0",
+    "tailwindcss": "^3.0.24"
+  }
+}
