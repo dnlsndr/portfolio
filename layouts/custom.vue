@@ -1,6 +1,7 @@
 <template>
 
   <Head>
+    <Link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <Meta name="theme-color" :content="themeColor" />
   </Head>
 

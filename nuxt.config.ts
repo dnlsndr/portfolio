@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     "assets/css/main.css"
   ],
 
+
   build: {
     postcss: {
       postcssOptions: {
