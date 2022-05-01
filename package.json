@@ -10,7 +10,7 @@
     "nuxt": "3.0.0-rc.1"
   },
   "dependencies": {
-    "@dnlsndr/vue-phosphor-icons": "^1.15.0",
+    "@dnlsndr/vue-phosphor-icons": "^1.15.1",
     "@hotellistat/robust-ui": "^0.17.3",
     "@tailwindcss/typography": "^0.5.2",
     "autoprefixer": "^10.4.5",
