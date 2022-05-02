@@ -16,9 +16,6 @@
       text-gray-500
       dark:text-gray-400
     ">
-    <!-- <NavigationMenu slide-out-left v-model:opened="menuOpen">
-
-    </NavigationMenu> -->
     <div class="max-w-screen-lg mx-auto">
       <div class="
           mb-16
@@ -33,17 +30,6 @@
           dnlsndr
 
         </div>
-        <!-- <div @click="menuOpen = !menuOpen" class="
-            cursor-pointer
-            w-8
-            h-8
-            flex
-            justify-center
-            items-center
-            rounded-full
-          ">
-          <ph-hamburger size="24" weight="light" />
-        </div> -->
         <div @click="toggleTheme()" class="
             cursor-pointer
             ml-auto

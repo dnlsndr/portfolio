@@ -13,7 +13,6 @@ export default defineNuxtConfig({
           "postcss-import": {},
           "tailwindcss/nesting": {},
           "tailwindcss": {},
-          "cssnano": {},
           "autoprefixer": {},
         },
       }

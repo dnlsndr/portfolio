@@ -51,7 +51,6 @@
     </div>
 
     <separator class="col-span-full mb-16 font-outfit">Stats</separator>
-    <!-- tes -->
     <div class="grid lg:grid-cols-3 gap-y-8 gap-x-16 mb-16">
       <div class="flex gap-x-4 lg:flex-col items-baseline lg:items-center">
         <div
@@ -256,10 +255,6 @@ import {
   PhGithubLogo,
 } from '@dnlsndr/vue-phosphor-icons'
 import Separator from '@/components/Separator.vue'
-
-definePageMeta({
-  layout: "custom",
-})
 
 useHead({
   title: 'Daniel Schneider',
