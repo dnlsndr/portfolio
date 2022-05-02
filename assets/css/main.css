@@ -29,6 +29,10 @@ html {
   scrollbar-color: dark;
 }
 
+html {
+  overflow: overlay;
+}
+
 html::-webkit-scrollbar {
   width: 8px;
 }

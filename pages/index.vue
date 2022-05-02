@@ -203,6 +203,20 @@
         </div>
         <div class="ml-auto">webcam</div>
       </div>
+      <div class="flex items-baseline">
+        <div
+          class="text-lg font-outfit text-gray-800 dark:text-white transition-colors duration-200">
+          SONY S7C
+        </div>
+        <div class="ml-auto">camera</div>
+      </div>
+      <div class="flex items-baseline">
+        <div
+          class="text-lg font-outfit text-gray-800 dark:text-white transition-colors duration-200">
+
+        </div>
+        <div class="ml-auto">camera</div>
+      </div>
     </div>
 
     <separator class="col-span-full mb-16 font-outfit">Experience</separator>
@@ -224,6 +238,7 @@
         </article>
       </div>
     </div>
+
     <separator class="mb-16">Favorite OSS projects</separator>
 
     <div class="flex flex-wrap gap-2">
@@ -287,6 +302,9 @@ let age = (monthDiff(new Date(1998, 9, 8), new Date()) / 12).toFixed(1)
 let technologies = [
   'vue.js',
   'NestJS',
+  'CEPH',
+  'RabbitMq',
+  'Strapi',
   'Docker',
   'Kubernetes',
   'Node.js/Deno',

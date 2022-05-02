@@ -2,7 +2,7 @@
 
   <Head>
     <Link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-    <Meta name="theme-color" :content="themeColor" />
+    <Meta name="theme-color" content="#121212" />
   </Head>
 
   <div class="
@@ -16,9 +16,9 @@
       text-gray-500
       dark:text-gray-400
     ">
-    <NavigationMenu v-model:opened="menuOpen">
+    <!-- <NavigationMenu slide-out-left v-model:opened="menuOpen">
 
-      test</NavigationMenu>
+    </NavigationMenu> -->
     <div class="max-w-screen-lg mx-auto">
       <div class="
           mb-16
@@ -29,7 +29,11 @@
           transition-colors
           duration-200
         ">
-        <div @click="menuOpen = !menuOpen" class="
+        <div class="font-outfit text-xl">
+          dnlsndr
+
+        </div>
+        <!-- <div @click="menuOpen = !menuOpen" class="
             cursor-pointer
             w-8
             h-8
@@ -39,7 +43,7 @@
             rounded-full
           ">
           <ph-hamburger size="24" weight="light" />
-        </div>
+        </div> -->
         <div @click="toggleTheme()" class="
             cursor-pointer
             ml-auto
@@ -50,16 +54,22 @@
             items-center
             rounded-full
           ">
-          <transition v-if="theme !== undefined" name="scale" mode="out-in">
-            <ph-sun key="dark" v-if="theme === 'dark'" size="24"
+          <transition name="scale" mode="out-in">
+            <PhSunHorizon key="undefined"
+              v-if="themeReady && theme === undefined" size="24"
               weight="light" />
-            <ph-moon key="light" v-else size="24" weight="light" />
+            <PhSun key="dark" v-else-if="themeReady && theme === 'dark'"
+              size="24" weight="light" />
+            <PhMoon key="light" v-else-if="themeReady && theme === 'light'"
+              size="24" weight="light" />
           </transition>
         </div>
       </div>
 
       <section class="mb-16">
-        <slot />
+        <NuxtLayout>
+          <NuxtPage />
+        </NuxtLayout>
       </section>
       <separator class="mb-16" />
 
@@ -98,18 +108,12 @@ import {
   PhHamburger,
   PhSun,
   PhMoon,
+  PhSunHorizon
 } from '@dnlsndr/vue-phosphor-icons'
 import Separator from '@/components/Separator.vue'
 
 let theme = ref(undefined)
-
-let themeColor = computed(() => {
-  if (theme.value === "dark") {
-    return "#121212"
-  } else {
-    return "#ffffff"
-  }
-})
+let themeReady = ref(false)
 
 useHead({
   script: [
@@ -122,27 +126,39 @@ useHead({
 let menuOpen = ref(false)
 
 onMounted(() => {
-  if (window.localStorage.theme) {
-    theme.value = window.localStorage.theme
-  } else {
-    theme.value = "dark"
-    localStorage.theme = 'dark'
+  if (localStorage.theme) {
+    theme.value = localStorage.theme
   }
+  themeReady.value = true
 })
 
-const toggleTheme = () => {
-  if (localStorage.theme === 'dark') {
-    console.log("setting light");
+
+function setDarkTheme(value: boolean) {
+  if (value) {
+    localStorage.theme = 'dark'
+    document.documentElement.classList.add('dark')
+    theme.value = 'dark'
+  } else {
     localStorage.theme = 'light'
     document.documentElement.classList.remove('dark')
     theme.value = 'light'
+  }
+}
+
+const toggleTheme = () => {
+  if (!('theme' in localStorage)) {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setDarkTheme(false)
+    } else {
+      setDarkTheme(true)
+    }
+    return
+  }
+
+  if (localStorage.theme === 'dark') {
+    setDarkTheme(false)
   } else {
-    console.log("setting dark");
-    localStorage.theme = 'dark'
-    document.documentElement.classList.add('dark')
-
-
-    theme.value = 'dark'
+    setDarkTheme(true)
   }
 }
 
