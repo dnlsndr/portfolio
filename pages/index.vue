@@ -33,11 +33,10 @@
       class="text-gray-700 dark:text-gray-200 transition-colors duration-200 mb-1">
       Contact
     </h4>
-    <div>Reach me at</div>
     <div class="mb-8">
       <client-only placeholder="Tricking them puny bots...">
         <address class="not-italic font-gray-200">
-          daniel.schneider@eramux.com
+          yo@dnlsndr.me
         </address>
       </client-only>
     </div>
