@@ -208,13 +208,6 @@
         </div>
         <div class="ml-auto">camera</div>
       </div>
-      <div class="flex items-baseline">
-        <div
-          class="text-lg font-outfit text-gray-800 dark:text-white transition-colors duration-200">
-
-        </div>
-        <div class="ml-auto">camera</div>
-      </div>
     </div>
 
     <separator class="col-span-full mb-16 font-outfit">Experience</separator>
