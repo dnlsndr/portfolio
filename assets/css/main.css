@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+/* html {
   font-family: 'Inter', sans-serif;
-}
-@supports (font-variation-settings: normal) {
+} */
+/* @supports (font-variation-settings: normal) {
   html {
     font-family: 'Inter var', sans-serif;
   }
-}
+} */
 
 html {
   font-family: 'Inter', system-ui, sans-serif;
@@ -17,20 +17,17 @@ html {
   font-feature-settings: 'case', 'rlig', 'calt' 0;
   text-size-adjust: 100%;
   box-sizing: border-box;
+  overflow: overlay;
 }
 
-@supports (font-variation-settings: normal) {
+/* @supports (font-variation-settings: normal) {
   html {
     font-family: 'Inter var', system-ui, sans-serif;
   }
-}
+} */
 
 * {
   scrollbar-color: dark;
-}
-
-html {
-  overflow: overlay;
 }
 
 html::-webkit-scrollbar {

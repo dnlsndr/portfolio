@@ -1,7 +1,7 @@
 <template>
 
   <Head>
-    <Link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <!-- <Link rel="stylesheet" href="https://rsms.me/inter/inter.css" /> -->
     <Meta name="theme-color" content="#121212" />
   </Head>
 
@@ -102,6 +102,21 @@ let theme = ref(undefined)
 let themeReady = ref(false)
 
 useHead({
+  link: [
+    {
+      rel: "preconnect",
+      href: "https://fonts.googleapis.com"
+    },
+    {
+      rel: "preconnect",
+      href: "https://fonts.gstatic.com",
+      crossorigin: true
+    },
+    {
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Outfit:wght@400;500;600&display=swap"
+    },
+  ],
   script: [
     {
       src: "/theme.js"

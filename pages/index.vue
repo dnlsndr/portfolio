@@ -6,7 +6,7 @@
       Daniel Schneider
     </div>
     <div
-      class="mb-4 text font-normal text-gray-700 dark:text-gray-200 transition-colors duration-200">
+      class="mb-4 text text-gray-700 dark:text-gray-200 transition-colors duration-200">
       VP of engineering at
       <b>Hotellistat</b>
     </div>
