@@ -1,5 +1,6 @@
 <template>
   <div>
+    {{ spotify }}
     <img src="/me.jpg" class="w-20 h-20 rounded-full mb-6" />
     <div
       class="mb-1 text-2xl font-semibold font-outfit text-gray-900 dark:text-white transition-colors duration-200">
@@ -275,6 +276,8 @@ useHead({
   ]
 })
 
+
+let spotify = await useFetch('/api/spotify')
 
 function monthDiff(d1, d2) {
   var months
