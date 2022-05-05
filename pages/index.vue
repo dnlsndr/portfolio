@@ -7,7 +7,7 @@
     </div>
     <div
       class="mb-4 text text-gray-700 dark:text-gray-200 transition-colors duration-200">
-      VP of engineering at
+      Head of Engineering at
       <b>Hotellistat</b>
     </div>
     <div class="mb-12">
